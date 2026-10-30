@@ -5,16 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>План ИнКрафт на ноябрь</title>
-<meta name="description" content="План маркетинга ИнКрафт на ноябрь 2026: каталог для продаж, формы заявки на сайте, деньги и время">
+<meta name="description" content="План маркетинга ИнКрафт на ноябрь 2026: каталог для продаж, формы заявки на сайте, кто что делает и план по неделям">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
 <style>
 :root{
-  /* Layout: документ в одну колонку до 880px. Шапка с четырьмя цифрами, разделы через линейки,
-     левая колонка 200px для меток. Акцент: шов под заголовком и суммы. Палитра и шрифт как у стратегии. */
+  /* Layout: документ до 1040px, текст до 66 знаков. Шапка с цифрами, дальше инфографика:
+     шаги каталога, шаблон карточки, схема «сейчас и после», роли, план по неделям. Палитра и шрифт как у стратегии. */
   --bg:#FFFFFF;
   --surface:#F3F5F9;
+  --surface-2:#E5E9F1;
   --ink:#131B2E;
   --ink-2:#39445C;
   --muted:#5E6880;
@@ -23,25 +24,34 @@
   --accent:#365AAD;
   --accent-ink:#2A4585;
   --accent-soft:#E8EEF9;
+  --sky-soft:#E2F0FA;
+  --sky-ink:#1B5A84;
   --money:#18307F;
   --prio:#16A34A;
   --prio-soft:#DDF4E4;
   --prio-ink:#166534;
+  --bad:#D92D2D;
+  --bad-soft:#FBE2E2;
+  --bad-ink:#8A1C1C;
   --focus:#2563EB;
   --font:"Manrope","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#0D1220; --surface:#141B2D; --ink:#EAEFF8; --ink-2:#C3CBDB; --muted:#95A0B6;
+    --bg:#0D1220; --surface:#141B2D; --surface-2:#1E2840; --ink:#EAEFF8; --ink-2:#C3CBDB; --muted:#95A0B6;
     --line:#232D44; --line-2:#36425E; --accent:#7896E0; --accent-ink:#A3B8EE; --accent-soft:#1A2647;
-    --money:#9DB7FF; --prio:#22C55E; --prio-soft:#123321; --prio-ink:#8BE3A8; --focus:#60A5FA;
+    --sky-soft:#13283A; --sky-ink:#8FCBF0; --money:#9DB7FF;
+    --prio:#22C55E; --prio-soft:#123321; --prio-ink:#8BE3A8;
+    --bad:#EF4444; --bad-soft:#3A1717; --bad-ink:#F8A5A5; --focus:#60A5FA;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0D1220; --surface:#141B2D; --ink:#EAEFF8; --ink-2:#C3CBDB; --muted:#95A0B6;
+  --bg:#0D1220; --surface:#141B2D; --surface-2:#1E2840; --ink:#EAEFF8; --ink-2:#C3CBDB; --muted:#95A0B6;
   --line:#232D44; --line-2:#36425E; --accent:#7896E0; --accent-ink:#A3B8EE; --accent-soft:#1A2647;
-  --money:#9DB7FF; --prio:#22C55E; --prio-soft:#123321; --prio-ink:#8BE3A8; --focus:#60A5FA;
+  --sky-soft:#13283A; --sky-ink:#8FCBF0; --money:#9DB7FF;
+  --prio:#22C55E; --prio-soft:#123321; --prio-ink:#8BE3A8;
+  --bad:#EF4444; --bad-soft:#3A1717; --bad-ink:#F8A5A5; --focus:#60A5FA;
   color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -51,17 +61,19 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16.
   font-variant-numeric:tabular-nums lining-nums;-webkit-font-smoothing:antialiased}
 a{color:var(--accent-ink);text-underline-offset:3px}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
-h1,h2,h3,p,ol,ul,dl,dd{margin:0}
+h1,h2,h3,p,ol,ul,dl,dd,figure{margin:0}
 h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
-.wrap{max-width:880px;margin-inline:auto;padding-left:max(16px, env(safe-area-inset-left,0px));
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.wrap{max-width:1040px;margin-inline:auto;padding-left:max(16px, env(safe-area-inset-left,0px));
   padding-right:max(16px, env(safe-area-inset-right,0px))}
 .eyebrow,.label{font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase}
 .eyebrow{color:var(--accent-ink)}
 .label{color:var(--muted)}
-.m{color:var(--money);font-weight:800;white-space:nowrap}
+.ico{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
 
 /* шапка */
-.hero{padding-block:clamp(36px,6vw,72px) clamp(36px,5vw,56px)}
+.hero{padding-block:clamp(36px,6vw,72px) clamp(32px,5vw,52px)}
 .hero h1{margin-top:16px;font-size:clamp(44px,8vw,84px);font-weight:800;letter-spacing:-0.035em;line-height:.95}
 .seam{height:14px;margin-block:24px 22px;max-width:620px;
   background:
@@ -69,59 +81,183 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
    radial-gradient(circle at 0 50%, transparent 5.1px, var(--accent) 5.6px 6.4px, transparent 6.9px) 3.5px 0/7px 14px repeat-x;
   -webkit-mask-image:linear-gradient(90deg,#000 0,#000 72%,transparent);mask-image:linear-gradient(90deg,#000 0,#000 72%,transparent)}
 .sub{font-size:clamp(20px,2.5vw,25px);font-weight:600;color:var(--ink);letter-spacing:-0.01em;line-height:1.3;max-width:38ch}
-.intro{display:grid;gap:12px;margin-top:16px;color:var(--ink-2);max-width:64ch}
+.intro{margin-top:14px;color:var(--ink-2);max-width:64ch}
 .facts{margin-top:clamp(28px,4vw,40px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ink)}
 .facts div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:6px;padding:16px 16px 18px 0;border-bottom:1px solid var(--line)}
-.facts dd{font-size:clamp(28px,3.4vw,36px);font-weight:800;letter-spacing:-0.03em;line-height:1.05;color:var(--money);white-space:nowrap}
+.facts dd{font-size:clamp(28px,3.4vw,38px);font-weight:800;letter-spacing:-0.03em;line-height:1.05;color:var(--money);white-space:nowrap}
 .facts dt{font-size:14px;color:var(--muted);line-height:1.35}
 
 /* разделы */
-.sec{padding-block:clamp(40px,6vw,60px);border-top:1px solid var(--line)}
-.sec-head{display:grid;gap:10px;margin-bottom:20px}
+.sec{padding-block:clamp(36px,5vw,56px);border-top:1px solid var(--line)}
+.sec-head{display:grid;gap:10px;margin-bottom:22px}
 .sec h2{font-size:clamp(26px,3.6vw,36px);font-weight:700;letter-spacing:-0.025em}
 .sec-lead{color:var(--ink-2);max-width:64ch}
 .badge{justify-self:start;font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--prio-soft);color:var(--prio-ink)}
-.text{display:grid;gap:14px;color:var(--ink-2);max-width:66ch}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tg{display:inline-block;font-size:12px;line-height:1.35;padding:2px 7px;border-radius:5px}
+.tg.me{background:var(--accent-soft);color:var(--accent-ink);font-weight:700}
+.tg.team{background:var(--surface-2);color:var(--ink-2)}
+.tg b{font-weight:700}
 
-/* критерий готовности */
-.done{margin-top:24px;padding:18px 20px 20px;border-radius:12px;background:var(--surface);max-width:66ch}
+/* шаги каталога */
+.flow{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
+.step{position:relative;counter-increment:s;padding:18px;border-radius:12px;background:var(--surface);display:grid;gap:10px;align-content:start}
+.step-n{display:flex;align-items:center;gap:10px}
+.step-n::before{content:counter(s);flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--bg);font-weight:800;font-size:14px;display:grid;place-items:center}
+.step h3{font-size:18px;font-weight:700}
+.step p{color:var(--ink-2);font-size:15px;line-height:1.5}
+.step:not(:first-child)::after{content:"";position:absolute;left:-15px;top:28px;width:9px;height:9px;border-top:2px solid var(--accent);border-right:2px solid var(--accent);transform:rotate(45deg)}
+.groups{margin-top:18px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.groups .label{margin-right:4px}
+.chip{font-size:13.5px;line-height:1.3;padding:5px 11px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line-2);color:var(--ink-2)}
+
+/* шаблон карточки и критерий готовности */
+.pair{margin-top:28px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+.anat{padding:18px;border-radius:12px;box-shadow:inset 0 0 0 1px var(--line-2);display:grid;grid-template-columns:200px minmax(0,1fr);gap:14px 18px;align-items:center}
+.anat figcaption{grid-column:1 / -1}
+.mock{border-radius:10px;background:var(--bg);box-shadow:0 0 0 1px var(--line-2),0 6px 16px -10px rgba(19,27,46,.35);overflow:hidden}
+.mk-img{height:70px;display:grid;place-items:center;color:var(--muted);
+  background:repeating-linear-gradient(135deg,var(--surface) 0 6px,var(--surface-2) 6px 7px)}
+.mk-body{padding:10px 12px 12px;display:grid;gap:7px}
+.mk-cat{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);line-height:1.2}
+.mk-title{font-weight:700;color:var(--ink);font-size:13.5px;line-height:1.25;display:flex;align-items:center;justify-content:space-between;gap:6px}
+.mk-spec{display:flex;align-items:center;gap:8px}
+.mk-lines{flex:1;display:grid;gap:4px}
+.mk-lines span{height:5px;border-radius:3px;background:var(--surface-2)}
+.mk-lines span:last-child{width:62%}
+.mk-meta{display:flex;justify-content:space-between;align-items:center;gap:6px;font-size:11.5px;color:var(--ink-2);line-height:1.2}
+.mk-meta span{display:flex;align-items:center;gap:4px}
+.mk-meta b{color:var(--money);font-weight:800}
+.mk-cta{display:flex;align-items:center;gap:8px}
+.mk-btn{flex:1;text-align:center;padding:6px;border-radius:6px;background:var(--accent);color:var(--bg);font-weight:700;font-size:11.5px;line-height:1.3}
+.pin{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:10.5px;font-weight:800;font-style:normal;line-height:1;flex:none}
+.legend{list-style:none;padding:0;display:grid;gap:9px;font-size:14.5px;line-height:1.35;color:var(--ink-2)}
+.legend li{display:flex;gap:9px;align-items:flex-start}
+.done{padding:18px 20px 20px;border-radius:12px;background:var(--surface)}
 .done ul{list-style:none;padding:0;margin-top:10px;display:grid;gap:8px}
-.done li{position:relative;padding-left:28px;color:var(--ink)}
+.done li{position:relative;padding-left:28px;color:var(--ink);font-size:15.5px;line-height:1.5}
 .done li::before{content:"";position:absolute;left:3px;top:.45em;width:13px;height:7px;
   border-left:2.5px solid var(--prio);border-bottom:2.5px solid var(--prio);transform:rotate(-45deg)}
+.after{margin-top:20px;max-width:620px}
+
+/* формы: сейчас и после */
+.ba{display:grid;gap:14px}
+.ba-row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:10px 18px;align-items:center}
+.st{display:inline-block;font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.st.bad{background:var(--bad-soft);color:var(--bad-ink)}
+.st.good{background:var(--prio-soft);color:var(--prio-ink)}
+.nodes{list-style:none;padding:0;display:flex;align-items:stretch;gap:26px}
+.node{position:relative;flex:1 1 0;min-width:0;display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:10px;
+  background:var(--surface);color:var(--ink);font-size:14.5px;line-height:1.35}
+.node .ico{color:var(--accent-ink)}
+.node + .node::before{content:"";position:absolute;left:-19px;top:50%;width:9px;height:9px;margin-top:-5px;
+  border-top:2px solid var(--line-2);border-right:2px solid var(--line-2);transform:rotate(45deg)}
+.node.bad{background:var(--bad-soft);color:var(--bad-ink);font-weight:600}
+.node.bad .ico{color:var(--bad)}
+.node.good{flex-grow:2;background:var(--prio-soft);color:var(--prio-ink);font-weight:600}
+.node.good .ico{color:var(--prio)}
+.ba-note{color:var(--muted);font-size:14.5px}
+.adds{margin-top:26px;display:grid;gap:12px}
+.adds-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.adds-list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.add{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:10px;box-shadow:inset 0 0 0 1px var(--line-2);
+  color:var(--ink);font-size:15px;line-height:1.4}
+.add .ico{color:var(--accent)}
 
 /* не прорабатываем */
-.skip{list-style:none;padding:0;display:grid;gap:8px;max-width:66ch}
-.skip li{position:relative;padding-left:26px;color:var(--ink)}
-.skip li::before{content:"";position:absolute;left:4px;top:.8em;width:10px;height:2px;border-radius:1px;background:var(--muted)}
-.skip-note{margin-top:16px;color:var(--ink-2);max-width:64ch}
+.skip{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.skip li{font-size:14.5px;line-height:1.35;padding:8px 14px;border-radius:999px;background:var(--surface);color:var(--ink-2)}
+.skip-note{margin-top:14px;color:var(--ink-2);max-width:64ch}
 
-/* деньги и время, недели */
-.rows{display:grid;border-top:1px solid var(--line-2)}
-.row{display:grid;grid-template-columns:200px minmax(0,1fr);gap:6px 24px;padding:16px 0;border-bottom:1px solid var(--line)}
-.row dt,.row .when{font-weight:700;color:var(--ink)}
-.row dd,.row p{color:var(--ink-2)}
-.row dd{display:grid;gap:8px}
-.row ul{padding-left:20px;display:grid;gap:6px}
-.weeks{list-style:none;padding:0}
-.cond{margin-top:24px;padding:20px 22px;border-radius:12px;background:var(--accent-soft);display:grid;gap:8px;max-width:66ch}
-.cond .label{color:var(--accent-ink)}
-.cond p{color:var(--ink)}
+/* роли */
+.roles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.role{padding:18px;border-radius:12px;background:var(--surface);display:grid;gap:10px;align-content:start}
+.role h3{font-size:17px;font-weight:700}
+.role .rs{font-size:13.5px;color:var(--muted);line-height:1.3;margin-top:-6px}
+.role ul{padding-left:18px;display:grid;gap:6px;font-size:14.5px;color:var(--ink-2);line-height:1.45}
+.role.owner{background:var(--accent-soft)}
+.role .big{font-size:26px;font-weight:800;letter-spacing:-0.02em;color:var(--money);line-height:1.05;margin-top:-4px}
+.cond{margin-top:16px;padding:18px 20px;border-radius:12px;box-shadow:inset 0 0 0 1px var(--line-2);display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 16px;align-items:baseline}
+.cond .label{color:var(--accent-ink);white-space:nowrap}
+.cond p{color:var(--ink);max-width:70ch}
+
+/* по неделям */
+.gantt{display:grid;grid-template-columns:118px repeat(4,minmax(0,1fr));gap:6px}
+.g-head,.g-row{display:contents}
+.g-head span{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:0 4px 4px}
+.g-lab{font-weight:700;font-size:14.5px;color:var(--ink);display:flex;align-items:center;padding:10px 4px 10px 0}
+.g-c{padding:10px 12px;border-radius:8px;font-size:14px;line-height:1.4}
+.g-row.cat .g-c{background:var(--accent-soft);color:var(--accent-ink)}
+.g-row.site .g-c{background:var(--sky-soft);color:var(--sky-ink)}
+.g-row.own .g-c{background:var(--surface);color:var(--ink-2)}
+.g-row .g-c.fin{background:var(--bg);box-shadow:inset 0 0 0 2px var(--money);color:var(--ink);font-weight:700}
+
+/* итоги */
+.res{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px;align-items:start}
+.report,.next{padding:20px;border-radius:12px;display:grid;gap:14px;align-content:start}
+.report{background:var(--surface)}
+.kpis{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.kpis li{display:flex;gap:10px;align-items:center;padding:12px;border-radius:10px;background:var(--bg);font-size:14.5px;line-height:1.35;color:var(--ink)}
+.kpis .ico{color:var(--accent)}
+.next{box-shadow:inset 0 0 0 1px var(--line-2)}
+.next p:not(.label){color:var(--ink-2)}
+.cost{border-top:1px solid var(--line)}
+.cost div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.cost dt{color:var(--ink-2)}
+.cost dd{font-weight:800;color:var(--money);white-space:nowrap}
 
 /* повестка */
-.agenda{list-style:none;padding:0;counter-reset:a;display:grid;gap:14px;max-width:66ch}
-.agenda li{counter-increment:a;position:relative;padding-left:44px;min-height:28px;color:var(--ink)}
-.agenda li::before{content:counter(a);position:absolute;left:0;top:-1px;width:28px;height:28px;border-radius:50%;
+.agenda{list-style:none;padding:0;counter-reset:a;display:grid;gap:12px;max-width:66ch}
+.agenda li{counter-increment:a;position:relative;padding-left:42px;min-height:28px;color:var(--ink);line-height:1.45}
+.agenda li::before{content:counter(a);position:absolute;left:0;top:-2px;width:28px;height:28px;border-radius:50%;
   background:var(--accent-soft);color:var(--accent-ink);font-weight:700;font-size:14px;display:grid;place-items:center}
 
 .foot{padding-block:24px 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
 .foot .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between}
 
+@media (max-width:900px){
+  .roles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pair{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .flow{grid-template-columns:1fr;gap:22px}
+  .step:not(:first-child)::after{left:30px;top:-17px;transform:rotate(135deg)}
+  .ba-row{grid-template-columns:1fr}
+  .nodes{flex-direction:column;gap:22px}
+  .node + .node::before{left:22px;top:-16px;margin-top:0;transform:rotate(135deg)}
+  .adds-list,.res,.agenda{grid-template-columns:1fr}
+  .cond{grid-template-columns:1fr}
+  .gantt{grid-template-columns:1fr;gap:6px}
+  .g-head{display:none}
+  .g-lab{padding:14px 0 2px}
+  .g-c::before{content:attr(data-w);display:block;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;opacity:.8;margin-bottom:2px}
+}
 @media (max-width:680px){
   .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .row{grid-template-columns:1fr}
+}
+@media (max-width:540px){
+  .roles{grid-template-columns:1fr}
+  .anat{grid-template-columns:1fr}
+  .mock{max-width:260px}
+  .kpis{grid-template-columns:1fr}
 }
 </style>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></symbol>
+    <symbol id="i-form" viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M5 5.5h14A1.5 1.5 0 0 1 20.5 7v8a1.5 1.5 0 0 1-1.5 1.5h-9L5.5 20v-3.5H5A1.5 1.5 0 0 1 3.5 15V7A1.5 1.5 0 0 1 5 5.5z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9 9l6 6M15 9l-6 6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></symbol>
+    <symbol id="i-page" viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="2"/><path d="M8 8h8M8 11.5h8"/><rect x="8" y="14.5" width="8" height="3" rx="1"/></symbol>
+    <symbol id="i-drawing" viewBox="0 0 24 24"><path d="M6 3.5h8l4 4v13H6z"/><path d="M14 3.5v4h4"/><path d="M9 16.5h6M9 14.5v4M15 14.5v4"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4.5 8h3L9 5.5h6L16.5 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-15a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-cursor" viewBox="0 0 24 24"><path d="M6 4l12 7-5.5 1.5L10 18z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3.5h8l4 4v13H6z"/><path d="M14 3.5v4h4M9 12h6M9 15.5h6"/></symbol>
+  </defs>
+</svg>
 </head>
 <body>
 <header class="hero">
@@ -130,14 +266,11 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
     <h1>План на&nbsp;ноябрь</h1>
     <div class="seam" aria-hidden="true"></div>
     <p class="sub">Начинаем в минимальном объёме: готовим каталог для продаж и&nbsp;дорабатываем формы заявки на&nbsp;сайте.</p>
-    <div class="intro">
-      <p>Из первой волны плана я взял две задачи без затрат на&nbsp;рекламу и&nbsp;подрядчиков, с&nbsp;понятным результатом к&nbsp;концу месяца. В&nbsp;каталоге будет видно, какие запчасти, расходники и&nbsp;оборудование поставляет компания, сколько они стоят и&nbsp;в&nbsp;какой срок их можно получить. Первыми каталог получают действующие клиенты: на&nbsp;их заводах уже работают ячейки ИнКрафт, и&nbsp;им регулярно нужны запчасти и&nbsp;расходники.</p>
-      <p>Рекламу и&nbsp;подрядчиков подключаем по итогам месяца, когда будут цифры. Полный план на&nbsp;12&nbsp;месяцев с&nbsp;бюджетами остаётся в&nbsp;силе: <a href="https://denismarsgpt-glitch.github.io/inkraft-marketing/">Маркетинг ИнКрафт</a>.</p>
-    </div>
+    <p class="intro">Обе задачи из первой волны плана, без затрат на&nbsp;рекламу и&nbsp;подрядчиков, с&nbsp;результатом к&nbsp;30&nbsp;ноября. <a href="https://denismarsgpt-glitch.github.io/inkraft-marketing/">Полный план на&nbsp;12&nbsp;месяцев</a> остаётся в&nbsp;силе.</p>
     <dl class="facts">
       <div><dt>моя работа за ноябрь, предоплата</dt><dd>100&nbsp;тыс.&nbsp;₽</dd></div>
-      <div><dt>на подрядчиков и&nbsp;рекламу</dt><dd>0&nbsp;₽</dd></div>
-      <div><dt>встречи с&nbsp;собственником за&nbsp;месяц</dt><dd>2&nbsp;часа</dd></div>
+      <div><dt>подрядчики и&nbsp;реклама</dt><dd>0&nbsp;₽</dd></div>
+      <div><dt>в&nbsp;неделю на&nbsp;созвон с&nbsp;собственником</dt><dd>1&nbsp;час</dd></div>
       <div><dt>каталог на&nbsp;сайте и&nbsp;решение на&nbsp;декабрь</dt><dd>30&nbsp;ноября</dd></div>
     </dl>
   </div>
@@ -149,21 +282,65 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
       <div class="sec-head">
         <span class="badge">Главная задача месяца</span>
         <h2 id="h-catalog">Каталог для продаж</h2>
+        <p class="sec-lead">Первыми каталог получают действующие клиенты: на&nbsp;их заводах уже работают ячейки ИнКрафт, и&nbsp;им регулярно нужны запчасти и&nbsp;расходники.</p>
       </div>
-      <div class="text">
-        <p>Сначала с&nbsp;руководителем продаж и&nbsp;собственником собираем матрицу ассортимента: что компания реально поставляет. Например, запчасти и&nbsp;расходники к&nbsp;роботам и&nbsp;сварочному оборудованию, сварочные материалы, лазерные станки, оборудование партнёров, опоки. По&nbsp;каждой группе записываем поставщиков, сроки поставки, маржу и&nbsp;кто обычно покупает. Для первой версии каталога выбираем 2–3 группы с&nbsp;лучшей маржой и&nbsp;повторными покупками.</p>
-        <p>Затем собираем сам каталог. В&nbsp;карточке каждой позиции есть описание и&nbsp;характеристики, ориентир цены («от» или «цена по&nbsp;запросу»), срок поставки и&nbsp;кнопка «Запросить цену». Раздел на&nbsp;сайте делаю я&nbsp;вместе с&nbsp;разработчиками ИнКрафт, цены и&nbsp;сроки даёт руководитель продаж. Из&nbsp;той&nbsp;же базы собираю PDF-версию, которую менеджеры отправляют клиентам.</p>
-        <p>В&nbsp;конце ноября руководитель продаж отправляет каталог действующим клиентам и&nbsp;созванивается с&nbsp;ними: какие запчасти и&nbsp;расходники им понадобятся в&nbsp;ближайшие месяцы.</p>
+      <ol class="flow">
+        <li class="step">
+          <div class="step-n"><h3>Матрица ассортимента</h3></div>
+          <p>Что компания поставляет, у&nbsp;кого, в&nbsp;какой срок, с&nbsp;какой маржой и&nbsp;кто покупает. Для первой версии выбираем 2–3 группы с&nbsp;лучшей маржой и&nbsp;повторными покупками.</p>
+          <div class="tags"><span class="tg me">Денис</span><span class="tg team"><b>Команда:</b> продажи, собственник</span></div>
+        </li>
+        <li class="step">
+          <div class="step-n"><h3>Каталог на&nbsp;сайте и&nbsp;в&nbsp;PDF</h3></div>
+          <p>Карточки позиций в&nbsp;разделе на&nbsp;сайте и&nbsp;та&nbsp;же база в&nbsp;PDF для менеджеров. Цены и&nbsp;сроки поставки даёт руководитель продаж.</p>
+          <div class="tags"><span class="tg me">Денис</span><span class="tg team"><b>Команда:</b> разработчики, продажи</span></div>
+        </li>
+        <li class="step">
+          <div class="step-n"><h3>Рассылка клиентам</h3></div>
+          <p>Руководитель продаж отправляет каталог действующим клиентам и&nbsp;узнаёт, какие запчасти и&nbsp;расходники им понадобятся в&nbsp;ближайшие месяцы.</p>
+          <div class="tags"><span class="tg team"><b>Команда:</b> продажи</span></div>
+        </li>
+      </ol>
+      <div class="groups">
+        <span class="label">Что может войти в&nbsp;каталог</span>
+        <span class="chip">запчасти и&nbsp;расходники к&nbsp;роботам</span>
+        <span class="chip">запчасти и&nbsp;расходники к&nbsp;сварочному оборудованию</span>
+        <span class="chip">сварочные материалы</span>
+        <span class="chip">лазерные станки</span>
+        <span class="chip">оборудование партнёров</span>
+        <span class="chip">опоки</span>
       </div>
-      <div class="done">
-        <p class="label">Готово, когда</p>
-        <ul>
-          <li>матрица ассортимента согласована с&nbsp;собственником;</li>
-          <li>на&nbsp;сайте опубликован каталог с&nbsp;2–3 приоритетными группами, у&nbsp;каждой позиции есть описание, ориентир цены или «цена по&nbsp;запросу», срок поставки и&nbsp;кнопка запроса;</li>
-          <li>тестовые запросы из&nbsp;каталога пришли ответственному в&nbsp;продажах;</li>
-          <li>у&nbsp;отдела продаж есть PDF-версия каталога;</li>
-          <li>каталог отправлен действующим клиентам.</li>
-        </ul>
+      <div class="pair">
+        <figure class="anat">
+          <figcaption class="label">Шаблон карточки</figcaption>
+          <div class="mock" aria-hidden="true">
+            <div class="mk-img"><svg class="ico"><use href="#i-camera"/></svg></div>
+            <div class="mk-body">
+              <p class="mk-cat">Товарная группа</p>
+              <p class="mk-title">Название позиции <i class="pin">1</i></p>
+              <div class="mk-spec"><div class="mk-lines"><span></span><span></span><span></span></div><i class="pin">2</i></div>
+              <div class="mk-meta"><span><b>от&nbsp;···&nbsp;₽</b><i class="pin">3</i></span><span>срок: ···&nbsp;дней<i class="pin">4</i></span></div>
+              <div class="mk-cta"><span class="mk-btn">Запросить цену</span><i class="pin">5</i></div>
+            </div>
+          </div>
+          <ol class="legend">
+            <li><i class="pin">1</i>Название, фото или чертёж</li>
+            <li><i class="pin">2</i>Характеристики текстом</li>
+            <li><i class="pin">3</i>Цена «от» или «цена по&nbsp;запросу»</li>
+            <li><i class="pin">4</i>Срок поставки</li>
+            <li><i class="pin">5</i>Кнопка «Запросить цену»</li>
+          </ol>
+        </figure>
+        <div class="done">
+          <p class="label">Готово, когда</p>
+          <ul>
+            <li>матрица ассортимента согласована с&nbsp;собственником;</li>
+            <li>на&nbsp;сайте опубликован каталог с&nbsp;2–3 приоритетными группами, карточки заполнены по&nbsp;шаблону;</li>
+            <li>тестовые запросы из&nbsp;каталога пришли ответственному в&nbsp;продажах;</li>
+            <li>у&nbsp;отдела продаж есть PDF-версия каталога;</li>
+            <li>каталог отправлен действующим клиентам.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -173,11 +350,38 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
       <div class="sec-head">
         <h2 id="h-site">Формы заявки на&nbsp;сайте</h2>
       </div>
-      <div class="text">
-        <p>Сейчас форма заявки есть только на странице «Контакты», и&nbsp;она ничего не&nbsp;отправляет. Посетитель нажимает кнопку и&nbsp;видит «Сообщение отправлено», хотя в&nbsp;коде страницы нет отправки данных. Такие заявки ИнКрафт не&nbsp;получает. На остальных страницах сайта есть только телефон и&nbsp;почта.</p>
-        <p>В первую неделю разработчики ИнКрафт настраивают эту форму, чтобы заявки приходили на&nbsp;почту ответственному в&nbsp;продажах. Затем по моему заданию ставят форму заявки на&nbsp;каждую страницу, кнопку «Прислать чертёж детали на&nbsp;оценку» и&nbsp;форму поиска запчасти по фото или артикулу для позиций, которых нет в&nbsp;каталоге.</p>
+      <div class="ba">
+        <div class="ba-row">
+          <p><span class="st bad">Сейчас</span></p>
+          <ol class="nodes">
+            <li class="node"><svg class="ico"><use href="#i-user"/></svg>Посетитель</li>
+            <li class="node"><svg class="ico"><use href="#i-form"/></svg>Форма на&nbsp;странице «Контакты»</li>
+            <li class="node"><svg class="ico"><use href="#i-chat"/></svg>Надпись «Сообщение отправлено»</li>
+            <li class="node bad"><svg class="ico"><use href="#i-x"/></svg>ИнКрафт заявку не&nbsp;получает</li>
+          </ol>
+        </div>
+        <div class="ba-row">
+          <p><span class="st good">С&nbsp;первой недели</span></p>
+          <ol class="nodes">
+            <li class="node"><svg class="ico"><use href="#i-user"/></svg>Посетитель</li>
+            <li class="node"><svg class="ico"><use href="#i-form"/></svg>Форма на&nbsp;странице «Контакты»</li>
+            <li class="node good"><svg class="ico"><use href="#i-mail"/></svg>Заявка на&nbsp;почте ответственного в&nbsp;продажах</li>
+          </ol>
+        </div>
+        <p class="ba-note">В коде страницы нет отправки данных. На&nbsp;остальных страницах сайта есть только телефон и&nbsp;почта.</p>
       </div>
-      <div class="done">
+      <div class="adds">
+        <div class="adds-head">
+          <span class="label">До конца ноября добавляем</span>
+          <div class="tags"><span class="tg me">Денис</span><span class="tg team"><b>Команда:</b> разработчики</span></div>
+        </div>
+        <ul class="adds-list">
+          <li class="add"><svg class="ico"><use href="#i-page"/></svg>Форма заявки на&nbsp;каждой странице</li>
+          <li class="add"><svg class="ico"><use href="#i-drawing"/></svg>Кнопка «Прислать чертёж детали на&nbsp;оценку»</li>
+          <li class="add"><svg class="ico"><use href="#i-camera"/></svg>Поиск запчасти по&nbsp;фото или артикулу, если позиции нет в&nbsp;каталоге</li>
+        </ul>
+      </div>
+      <div class="done after">
         <p class="label">Готово, когда</p>
         <ul>
           <li>тестовые заявки со&nbsp;всех форм пришли ответственному в&nbsp;продажах;</li>
@@ -193,47 +397,61 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
         <h2 id="h-skip">Что в&nbsp;ноябре не&nbsp;прорабатываем</h2>
       </div>
       <ul class="skip">
-        <li>Новогодние подарки клиентам.</li>
-        <li>Ноябрьская выставка.</li>
-        <li>Маркетинговая поддержка от&nbsp;китайского производителя роботов.</li>
+        <li>Новогодние подарки клиентам</li>
+        <li>Ноябрьская выставка</li>
+        <li>Поддержка от&nbsp;китайского производителя роботов</li>
       </ul>
       <p class="skip-note">Компания может вести эти задачи своими силами, в&nbsp;мой объём работы на&nbsp;ноябрь они не&nbsp;входят.</p>
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="h-money">
+  <section class="sec" aria-labelledby="h-roles">
     <div class="wrap">
       <div class="sec-head">
-        <h2 id="h-money">Деньги и&nbsp;время</h2>
+        <h2 id="h-roles">Кто что делает</h2>
       </div>
-      <dl class="rows">
-        <div class="row">
-          <dt>Моя работа</dt>
-          <dd><p><span class="m">100&nbsp;тыс.&nbsp;₽</span>, предоплата ноября. Это формат «Стратегия и&nbsp;сопровождение» из общего плана. В&nbsp;ноябре я&nbsp;сам собираю матрицу ассортимента, структуру каталога, тексты карточек и&nbsp;PDF-версию и&nbsp;пишу задание разработчикам. Это входит в&nbsp;оплату.</p></dd>
-        </div>
-        <div class="row">
-          <dt>Подрядчики и&nbsp;реклама</dt>
-          <dd><p><span class="m">0&nbsp;₽</span>. Каталог и&nbsp;формы делаем без подрядчиков: я&nbsp;и&nbsp;команда ИнКрафт.</p></dd>
-        </div>
-        <div class="row">
-          <dt>Команда ИнКрафт</dt>
-          <dd>
-            <ul>
-              <li>Ответственный за ноябрь, удобнее всего руководитель продаж.</li>
-              <li>Руководитель продаж: ассортимент, поставщики, цены и&nbsp;сроки поставки по выбранным группам, рассылка каталога клиентам.</li>
-              <li>Разработчики: форма на&nbsp;странице «Контакты», формы на&nbsp;всех страницах, раздел каталога на&nbsp;сайте.</li>
-              <li>Доступ к&nbsp;сайту.</li>
-            </ul>
-          </dd>
-        </div>
-        <div class="row">
-          <dt>Собственник</dt>
-          <dd><p>Час на&nbsp;первой встрече. Полчаса в&nbsp;середине месяца, чтобы утвердить матрицу ассортимента и&nbsp;группы для каталога. Полчаса 30&nbsp;ноября на&nbsp;итоги. По пятницам присылаю короткую сводку в&nbsp;Telegram.</p></dd>
-        </div>
-      </dl>
+      <div class="roles">
+        <article class="role">
+          <h3>Денис</h3>
+          <p class="rs">стратегия и&nbsp;сопровождение</p>
+          <ul>
+            <li>Матрица ассортимента, структура каталога, тексты карточек, PDF-версия</li>
+            <li>Раздел каталога на&nbsp;сайте вместе с&nbsp;разработчиками</li>
+            <li>Задание разработчикам на&nbsp;формы</li>
+            <li>Сводка собственнику после каждого созвона</li>
+          </ul>
+        </article>
+        <article class="role">
+          <h3>Руководитель продаж</h3>
+          <p class="rs">предлагаю ответственным за&nbsp;ноябрь</p>
+          <ul>
+            <li>Ассортимент, поставщики, цены и&nbsp;сроки поставки по&nbsp;выбранным группам</li>
+            <li>Рассылка каталога действующим клиентам</li>
+          </ul>
+        </article>
+        <article class="role">
+          <h3>Разработчики ИнКрафт</h3>
+          <p class="rs">сайт и&nbsp;формы</p>
+          <ul>
+            <li>Форма на&nbsp;странице «Контакты» в&nbsp;первую неделю</li>
+            <li>Формы заявки на&nbsp;всех страницах</li>
+            <li>Раздел каталога на&nbsp;сайте</li>
+            <li>Доступ к&nbsp;сайту для меня</li>
+          </ul>
+        </article>
+        <article class="role owner">
+          <h3>Собственник</h3>
+          <p class="big">1&nbsp;час в&nbsp;неделю</p>
+          <ul>
+            <li>Созвон: решения и&nbsp;ход работы</li>
+            <li>Утверждает матрицу ассортимента и&nbsp;группы каталога</li>
+            <li>30&nbsp;ноября: итоги и&nbsp;решение на&nbsp;декабрь</li>
+          </ul>
+        </article>
+      </div>
       <div class="cond">
         <p class="label">Главное условие</p>
-        <p>Каталог зависит от данных руководителя продаж: без цен и&nbsp;сроков поставки карточки не&nbsp;собрать. Формы и&nbsp;раздел каталога зависят от времени разработчиков. Поэтому на&nbsp;первой встрече договариваемся, сколько часов в&nbsp;неделю они выделяют на&nbsp;эту работу.</p>
+        <p>Каталог зависит от&nbsp;цен и&nbsp;сроков поставки, которые даёт руководитель продаж. Формы и&nbsp;раздел каталога зависят от&nbsp;времени разработчиков. На&nbsp;первой встрече договариваемся, сколько часов в&nbsp;неделю они выделяют на&nbsp;эту работу.</p>
       </div>
     </div>
   </section>
@@ -243,12 +461,36 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
       <div class="sec-head">
         <h2 id="h-weeks">По неделям</h2>
       </div>
-      <ol class="rows weeks">
-        <li class="row"><span class="when">2–6 ноября</span><p>Встреча с&nbsp;собственником, знакомство с&nbsp;руководителем продаж и&nbsp;разработчиками. Заявки с&nbsp;формы на&nbsp;странице «Контакты» приходят на&nbsp;почту. Начинаем матрицу ассортимента.</p></li>
-        <li class="row"><span class="when">9–13 ноября</span><p>Матрица ассортимента готова, собственник утверждает 2–3 группы для первой версии каталога. Формы заявки стоят на&nbsp;всех страницах сайта. Готовы структура каталога и&nbsp;шаблон карточки.</p></li>
-        <li class="row"><span class="when">16–20 ноября</span><p>Карточки первых групп: описания, цены, сроки поставки. Собираю раздел каталога на&nbsp;сайте вместе с&nbsp;разработчиками.</p></li>
-        <li class="row"><span class="when">23–30 ноября</span><p>Каталог опубликован на&nbsp;сайте, PDF-версия у&nbsp;отдела продаж, тестовые запросы проверены. Руководитель продаж отправляет каталог действующим клиентам. 30&nbsp;ноября отчёт на&nbsp;одной странице.</p></li>
-      </ol>
+      <div class="gantt" role="table" aria-label="План на ноябрь по неделям">
+        <div class="g-head" role="row">
+          <span role="columnheader"><span class="sr">Направление</span></span>
+          <span role="columnheader">2–6 ноября</span>
+          <span role="columnheader">9–13 ноября</span>
+          <span role="columnheader">16–20 ноября</span>
+          <span role="columnheader">23–30 ноября</span>
+        </div>
+        <div class="g-row cat" role="row">
+          <span class="g-lab" role="rowheader">Каталог</span>
+          <span class="g-c" role="cell" data-w="2–6 ноября">Матрица ассортимента</span>
+          <span class="g-c" role="cell" data-w="9–13 ноября">Структура каталога и&nbsp;шаблон карточки</span>
+          <span class="g-c" role="cell" data-w="16–20 ноября">Карточки первых групп, раздел на&nbsp;сайте</span>
+          <span class="g-c" role="cell" data-w="23–30 ноября">Каталог на&nbsp;сайте и&nbsp;в&nbsp;PDF, рассылка клиентам</span>
+        </div>
+        <div class="g-row site" role="row">
+          <span class="g-lab" role="rowheader">Формы</span>
+          <span class="g-c" role="cell" data-w="2–6 ноября">Заявки с&nbsp;«Контактов» приходят на&nbsp;почту</span>
+          <span class="g-c" role="cell" data-w="9–13 ноября">Формы на&nbsp;всех страницах, кнопка «Прислать чертёж»</span>
+          <span class="g-c" role="cell" data-w="16–20 ноября">Поиск запчасти по&nbsp;фото или артикулу</span>
+          <span class="g-c" role="cell" data-w="23–30 ноября">Тестовые заявки со&nbsp;всех форм</span>
+        </div>
+        <div class="g-row own" role="row">
+          <span class="g-lab" role="rowheader">Собственник</span>
+          <span class="g-c" role="cell" data-w="2–6 ноября">Первая встреча, повестка ниже</span>
+          <span class="g-c" role="cell" data-w="9–13 ноября">Утверждаем матрицу и&nbsp;группы каталога</span>
+          <span class="g-c" role="cell" data-w="16–20 ноября">Смотрим первые карточки</span>
+          <span class="g-c fin" role="cell" data-w="23–30 ноября">30&nbsp;ноября: итоги и&nbsp;решение на&nbsp;декабрь</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -257,9 +499,24 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
       <div class="sec-head">
         <h2 id="h-result">Итоги 30&nbsp;ноября</h2>
       </div>
-      <div class="text">
-        <p>В отчёте на&nbsp;одной странице будет, что вошло в&nbsp;каталог, сколько пришло запросов с&nbsp;сайта и&nbsp;от&nbsp;клиентов после рассылки и&nbsp;сколько отправлено КП.</p>
-        <p>Там же моё предложение на&nbsp;декабрь. Скорее всего, это следующие товарные группы в&nbsp;каталоге и&nbsp;реклама каталога в&nbsp;Яндекс Директе. Для рекламы уже нужны внешние деньги: <span class="m">от&nbsp;85&nbsp;тыс.&nbsp;₽ в&nbsp;месяц</span> на&nbsp;рекламу и&nbsp;<span class="m">30–50&nbsp;тыс.&nbsp;₽ в&nbsp;месяц</span> специалисту по Директу. Решение принимаем по цифрам ноября.</p>
+      <div class="res">
+        <div class="report">
+          <p class="label">Отчёт на&nbsp;одной странице</p>
+          <ul class="kpis">
+            <li><svg class="ico"><use href="#i-grid"/></svg>Что вошло в&nbsp;каталог</li>
+            <li><svg class="ico"><use href="#i-cursor"/></svg>Запросы с&nbsp;сайта</li>
+            <li><svg class="ico"><use href="#i-mail"/></svg>Запросы от&nbsp;клиентов после рассылки</li>
+            <li><svg class="ico"><use href="#i-doc"/></svg>Отправленные КП</li>
+          </ul>
+        </div>
+        <div class="next">
+          <p class="label">Решение на&nbsp;декабрь</p>
+          <p>Скорее всего, следующие товарные группы в&nbsp;каталоге и&nbsp;реклама каталога в&nbsp;Яндекс Директе. Решаем по&nbsp;цифрам ноября.</p>
+          <dl class="cost">
+            <div><dt>Реклама</dt><dd>от&nbsp;85&nbsp;тыс.&nbsp;₽ в&nbsp;месяц</dd></div>
+            <div><dt>Специалист по&nbsp;Директу</dt><dd>30–50&nbsp;тыс.&nbsp;₽ в&nbsp;месяц</dd></div>
+          </dl>
+        </div>
       </div>
     </div>
   </section>
