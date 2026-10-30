@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>План ИнКрафт на ноябрь</title>
-<meta name="description" content="План маркетинга ИнКрафт на ноябрь 2026: проработка и дизайн каталога для продаж, форма заявки, сбор кейсов, кто что делает и план по неделям">
+<meta name="description" content="План маркетинга ИнКрафт на ноябрь 2026: подготовка посадочной с каталогом для продаж, форма заявки, сбор кейсов, кто что делает и план по неделям">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
 <style>
 :root{
   /* Layout: документ до 1040px, текст до 66 знаков. Шапка с цифрами, главная задача нумерованными шагами
-     и одной картинкой результата, две маленькие задачи рядом, роли строками, план по неделям таблицей. */
+     и одной картинкой результата, две дополнительные задачи рядом, роли строками, план по неделям таблицей. */
   --bg:#FFFFFF;
   --surface:#F3F5F9;
   --surface-2:#E5E9F1;
@@ -30,8 +30,10 @@
   --prio:#16A34A;
   --prio-soft:#DDF4E4;
   --prio-ink:#166534;
+  --bad:#D92D2D;
   --bad-soft:#FBE2E2;
   --bad-ink:#8A1C1C;
+  --on-strong:#FFFFFF;
   --focus:#2563EB;
   --font:"Manrope","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
@@ -41,7 +43,7 @@
     --line:#232D44; --line-2:#36425E; --accent:#7896E0; --accent-ink:#A3B8EE; --accent-soft:#1A2647;
     --sky-soft:#13283A; --sky-ink:#8FCBF0; --money:#9DB7FF;
     --prio:#22C55E; --prio-soft:#123321; --prio-ink:#8BE3A8;
-    --bad-soft:#3A1717; --bad-ink:#F8A5A5; --focus:#60A5FA;
+    --bad:#EF4444; --bad-soft:#3A1717; --bad-ink:#F8A5A5; --focus:#60A5FA;
     color-scheme:dark;
   }
 }
@@ -50,7 +52,7 @@
   --line:#232D44; --line-2:#36425E; --accent:#7896E0; --accent-ink:#A3B8EE; --accent-soft:#1A2647;
   --sky-soft:#13283A; --sky-ink:#8FCBF0; --money:#9DB7FF;
   --prio:#22C55E; --prio-soft:#123321; --prio-ink:#8BE3A8;
-  --bad-soft:#3A1717; --bad-ink:#F8A5A5; --focus:#60A5FA;
+  --bad:#EF4444; --bad-soft:#3A1717; --bad-ink:#F8A5A5; --focus:#60A5FA;
   color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -69,6 +71,7 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
 .eyebrow{color:var(--accent-ink)}
 .label{color:var(--muted)}
 .who{font-size:14px;color:var(--muted);line-height:1.45}
+.ico{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
 
 /* шапка */
 .hero{padding-block:clamp(36px,6vw,72px) clamp(32px,5vw,52px)}
@@ -92,7 +95,6 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
 .sec-lead{color:var(--ink-2);max-width:66ch;display:grid;gap:10px}
 .sec-lead strong{color:var(--ink);font-weight:700}
 .badge{justify-self:start;font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--prio-soft);color:var(--prio-ink)}
-.h3s{font-size:19px;font-weight:700;margin-bottom:6px}
 
 /* шаги главной задачи */
 .steps{list-style:none;padding:0;counter-reset:s;display:grid;border-top:1px solid var(--line-2);max-width:820px}
@@ -102,22 +104,24 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
 .steps h3{font-size:17.5px;font-weight:700;line-height:1.3;padding-top:3px}
 .steps p{color:var(--ink-2)}
 
-/* картинка результата: дизайн каталога с заглушками */
+/* картинка результата: дизайн посадочной с заглушками */
 .shot{margin-top:28px;display:grid;gap:10px;max-width:860px}
 .bw{border-radius:12px;background:var(--bg);overflow:hidden;box-shadow:0 0 0 1px var(--line-2),0 18px 36px -26px rgba(19,27,46,.5)}
 .bw-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:var(--surface);border-bottom:1px solid var(--line)}
 .bw-bar i{width:9px;height:9px;border-radius:50%;background:var(--line-2)}
-.bw-tab{margin-left:8px;font-size:12px;color:var(--muted);padding:3px 10px;border-radius:6px;background:var(--bg)}
+.bw-tab{margin-left:8px;font-size:12px;color:var(--muted);padding:3px 10px;border-radius:6px;background:var(--bg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bw-page{padding:16px;display:grid;gap:14px}
-.bw-head{display:flex;align-items:center;gap:12px}
+.bw-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .bw-logo{flex:none;width:70px;height:14px;border-radius:4px;background:var(--surface-2)}
-.bw-search{flex:1;min-width:0;font-size:12px;color:var(--muted);padding:7px 10px;border-radius:7px;box-shadow:inset 0 0 0 1px var(--line-2);
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bw-body{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px}
-.bw-groups{list-style:none;padding:0;display:grid;gap:6px;align-content:start;font-size:12.5px}
-.bw-groups li{padding:7px 10px;border-radius:7px;background:var(--surface);color:var(--ink-2)}
-.bw-groups li.on{background:var(--accent-soft);color:var(--accent-ink);font-weight:700}
-.bw-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.bw-phone{width:96px;height:10px;border-radius:4px;background:var(--surface-2)}
+.bw-hero{padding:16px;border-radius:9px;background:var(--accent-soft);display:grid;gap:8px;justify-items:start}
+.bw-h1{height:11px;width:58%;border-radius:4px;background:var(--accent);opacity:.4}
+.bw-h1.s{height:8px;width:38%;opacity:.25}
+.bw-hbtn{margin-top:4px;font-size:11px;font-weight:700;line-height:1.3;padding:5px 12px;border-radius:6px;background:var(--accent);color:var(--bg)}
+.bw-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.bw-tabs span{font-size:12px;line-height:1.3;padding:5px 11px;border-radius:999px;background:var(--surface);color:var(--ink-2)}
+.bw-tabs .on{background:var(--accent-soft);color:var(--accent-ink);font-weight:700}
+.bw-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 .bw-card{padding:8px;border-radius:9px;box-shadow:inset 0 0 0 1px var(--line);display:grid;gap:6px}
 .bw-img{height:56px;border-radius:6px;background:repeating-linear-gradient(135deg,var(--surface) 0 6px,var(--surface-2) 6px 7px)}
 .bw-l{height:6px;border-radius:3px;background:var(--surface-2)}
@@ -134,15 +138,44 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
 .done li::before,.ok::before{content:"";position:absolute;left:3px;top:.45em;width:13px;height:7px;
   border-left:2.5px solid var(--prio);border-bottom:2.5px solid var(--prio);transform:rotate(-45deg)}
 
-/* маленькие задачи */
+/* дополнительные задачи */
 .smalls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
 .small{padding:20px;border-radius:12px;background:var(--surface);display:grid;gap:12px}
 .small h3{font-size:19px;font-weight:700}
 .small p{color:var(--ink-2)}
 .alert{padding:12px 14px;border-radius:10px;background:var(--bad-soft);color:var(--bad-ink);font-size:15px;line-height:1.5}
+.small p.alert{color:var(--bad-ink)}
 .alert b{font-weight:800}
-.small .ok{padding-top:12px;border-top:1px solid var(--line-2)}
+.small .ok{padding-top:12px;border-top:1px solid var(--line-2);color:var(--ink)}
 .small .ok::before{top:calc(12px + .45em)}
+
+/* маленькие иллюстрации в карточках */
+.ill{height:128px;border-radius:10px;background:var(--bg);box-shadow:inset 0 0 0 1px var(--line);
+  display:flex;align-items:center;justify-content:center;gap:clamp(12px,3vw,22px);padding:12px 16px;overflow:hidden}
+.mf{width:min(150px,46%);display:grid;gap:6px}
+.mf span{display:block;border-radius:5px;font-size:9.5px;line-height:1;padding:4px 6px}
+.mf .in{box-shadow:inset 0 0 0 1px var(--line-2);color:var(--muted)}
+.mf .in.tall{padding-bottom:14px}
+.mf .btn{background:var(--accent);color:var(--bg);font-weight:700;text-align:center;padding:5px 6px}
+.mf-arrow{flex:none;width:clamp(22px,6vw,40px);height:0;border-top:2px dashed var(--line-2);position:relative}
+.mf-arrow::after{content:"";position:absolute;right:0;top:-6px;width:9px;height:9px;border-top:2px solid var(--line-2);border-right:2px solid var(--line-2);transform:rotate(45deg)}
+.mf-mail{flex:none;position:relative;width:56px;height:56px;border-radius:12px;background:var(--surface);display:grid;place-items:center;color:var(--muted)}
+.mf-mail svg{width:30px;height:30px}
+.mf-x{position:absolute;right:-7px;top:-7px;width:24px;height:24px;border-radius:50%;background:var(--bad);color:var(--on-strong);
+  display:grid;place-items:center;box-shadow:0 0 0 3px var(--bg)}
+.mf-x svg{width:12px;height:12px;stroke-width:2.4}
+.cs-media{flex:none;width:min(128px,44%);height:86px;border-radius:8px;display:grid;place-items:center;
+  background:repeating-linear-gradient(135deg,var(--surface) 0 6px,var(--surface-2) 6px 7px)}
+.cs-play{width:34px;height:34px;border-radius:50%;background:var(--accent);display:grid;place-items:center}
+.cs-play::before{content:"";margin-left:3px;border-left:11px solid var(--bg);border-top:7px solid transparent;border-bottom:7px solid transparent}
+.cs-chart{flex:none;display:grid;gap:5px;justify-items:center}
+.cs-bars{display:flex;align-items:flex-end;gap:10px;height:60px}
+.cs-bars span{width:26px;border-radius:5px 5px 2px 2px}
+.cs-bars .b0{height:24%;background:var(--surface-2)}
+.cs-bars .b1{height:100%;background:var(--accent)}
+.cs-lab{display:flex;gap:10px;font-size:10.5px;line-height:1;color:var(--muted)}
+.cs-lab span{width:26px;text-align:center}
+.cs-cap{font-size:11px;font-weight:600;color:var(--ink-2);line-height:1.2;white-space:nowrap}
 
 /* не прорабатываем */
 .skip{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}
@@ -205,8 +238,6 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
 @media (max-width:680px){
   .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
   .person{grid-template-columns:1fr}
-  .bw-body{grid-template-columns:1fr}
-  .bw-groups{display:flex;flex-wrap:wrap}
   .bw-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 </style>
@@ -217,13 +248,13 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
     <p class="eyebrow">Маркетинг ИнКрафт · ноябрь 2026</p>
     <h1>План на&nbsp;ноябрь</h1>
     <div class="seam" aria-hidden="true"></div>
-    <p class="sub">Начинаем в минимальном объёме: прорабатываем каталог для продаж и&nbsp;делаем его дизайн.</p>
-    <p class="intro">Параллельно команда исправляет форму заявки на&nbsp;сайте и&nbsp;начинает собирать кейсы. Работу делает команда ИнКрафт, я&nbsp;ставлю задачи и&nbsp;проверяю результат. Сам руками делаю только дизайн каталога. <a href="https://denismarsgpt-glitch.github.io/inkraft-marketing/">Полный план на&nbsp;12&nbsp;месяцев</a> остаётся в&nbsp;силе.</p>
+    <p class="sub">Начинаем в минимальном объёме: готовим отдельную посадочную страницу с&nbsp;каталогом для продаж.</p>
+    <p class="intro">Параллельно команда исправляет форму заявки на&nbsp;сайте и&nbsp;начинает собирать кейсы. Работу делает команда ИнКрафт, я&nbsp;ставлю задачи и&nbsp;проверяю результат. Сам руками делаю только дизайн посадочной. <a href="https://denismarsgpt-glitch.github.io/inkraft-marketing/">Полный план на&nbsp;12&nbsp;месяцев</a> остаётся в&nbsp;силе.</p>
     <dl class="facts">
       <div><dt>моя работа за ноябрь, предоплата</dt><dd>100&nbsp;тыс.&nbsp;₽</dd></div>
       <div><dt>подрядчики и&nbsp;реклама</dt><dd>0&nbsp;₽</dd></div>
       <div><dt>в&nbsp;неделю на&nbsp;созвон с&nbsp;собственником</dt><dd>1&nbsp;час</dd></div>
-      <div><dt>дизайн каталога и&nbsp;решение на&nbsp;декабрь</dt><dd>30&nbsp;ноября</dd></div>
+      <div><dt>дизайн посадочной и&nbsp;решение на&nbsp;декабрь</dt><dd>30&nbsp;ноября</dd></div>
     </dl>
   </div>
 </header>
@@ -233,10 +264,10 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
     <div class="wrap">
       <div class="sec-head">
         <span class="badge">Главная задача месяца</span>
-        <h2 id="h-catalog">Каталог для продаж</h2>
+        <h2 id="h-catalog">Подготовить посадочную с&nbsp;каталогом для продаж</h2>
         <div class="sec-lead">
-          <p>Каталог будет разделом сайта: запчасти, расходники и&nbsp;оборудование, которые поставляет компания, с&nbsp;ценой «от», сроком поставки и&nbsp;кнопкой «Запросить цену». Первыми его получат действующие клиенты: на&nbsp;их заводах уже работают ячейки ИнКрафт, и&nbsp;им регулярно нужны запчасти и&nbsp;расходники.</p>
-          <p><strong>В ноябре сайт не&nbsp;собираем.</strong> Готовим всё, что нужно для сборки в&nbsp;декабре: матрицу ассортимента, структуру и&nbsp;дизайн каталога, таблицу позиций.</p>
+          <p>Каталог будет отдельной посадочной страницей: запчасти, расходники и&nbsp;оборудование, которые поставляет компания, с&nbsp;ценой «от», сроком поставки и&nbsp;кнопкой «Запросить цену». Первыми ссылку на&nbsp;неё получат действующие клиенты: на&nbsp;их заводах уже работают ячейки ИнКрафт, и&nbsp;им регулярно нужны запчасти и&nbsp;расходники.</p>
+          <p><strong>В ноябре посадочную не&nbsp;собираем.</strong> Готовим всё, что нужно для сборки в&nbsp;декабре: матрицу ассортимента, структуру и&nbsp;дизайн, таблицу позиций.</p>
         </div>
       </div>
       <p class="label" style="margin-bottom:10px">Что делаем в&nbsp;ноябре</p>
@@ -247,50 +278,47 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
           <p class="who">Делает руководитель продаж, я&nbsp;даю шаблон и&nbsp;проверяю.</p>
         </li>
         <li>
-          <h3>Структура каталога</h3>
-          <p>Определяем разделы и&nbsp;что будет в&nbsp;карточке позиции: название, фото или чертёж, характеристики, цена «от» или «цена по&nbsp;запросу», срок поставки, кнопка «Запросить цену». Решаем, куда приходит запрос цены и&nbsp;кто на&nbsp;него отвечает.</p>
+          <h3>Структура посадочной</h3>
+          <p>Определяем блоки страницы и&nbsp;что будет в&nbsp;карточке позиции: название, фото или чертёж, характеристики, цена «от» или «цена по&nbsp;запросу», срок поставки, кнопка «Запросить цену». Решаем, куда приходит запрос цены и&nbsp;кто на&nbsp;него отвечает.</p>
           <p class="who">Делаю я&nbsp;вместе с&nbsp;руководителем продаж.</p>
         </li>
         <li>
-          <h3>Дизайн каталога с&nbsp;заглушками</h3>
-          <p>Рисую страницы каталога: главную, страницу группы, карточку позиции и&nbsp;форму запроса. Вместо реальных фото и&nbsp;цен пока стоят заглушки. Разработчики ИнКрафт смотрят дизайн и&nbsp;оценивают, как и&nbsp;за&nbsp;какой срок собрать каталог на&nbsp;сайте.</p>
+          <h3>Дизайн посадочной с&nbsp;заглушками</h3>
+          <p>Рисую страницу: первый экран, товарные группы, карточки позиций и&nbsp;форму запроса. Вместо реальных фото и&nbsp;цен пока стоят заглушки. Разработчики ИнКрафт смотрят дизайн и&nbsp;оценивают, как и&nbsp;за&nbsp;какой срок собрать посадочную.</p>
           <p class="who">Дизайн делаю я&nbsp;руками, разработчики оценивают сборку.</p>
         </li>
         <li>
           <h3>Позиции первых групп</h3>
-          <p>Руководитель продаж собирает в&nbsp;таблицу позиции выбранных групп: названия, характеристики, цены и&nbsp;сроки поставки. По&nbsp;этой таблице в&nbsp;декабре наполняем каталог.</p>
+          <p>Руководитель продаж собирает в&nbsp;таблицу позиции выбранных групп: названия, характеристики, цены и&nbsp;сроки поставки. По&nbsp;этой таблице в&nbsp;декабре наполняем посадочную.</p>
           <p class="who">Делает руководитель продаж, я&nbsp;проверяю.</p>
         </li>
       </ol>
 
       <figure class="shot">
         <div class="bw" aria-hidden="true">
-          <div class="bw-bar"><i></i><i></i><i></i><span class="bw-tab">Каталог</span></div>
+          <div class="bw-bar"><i></i><i></i><i></i><span class="bw-tab">Посадочная с&nbsp;каталогом</span></div>
           <div class="bw-page">
-            <div class="bw-head"><span class="bw-logo"></span><span class="bw-search">Поиск по&nbsp;каталогу</span></div>
-            <div class="bw-body">
-              <ul class="bw-groups"><li class="on">Группа 1</li><li>Группа 2</li><li>Группа 3</li></ul>
-              <div class="bw-grid">
-                <div class="bw-card"><div class="bw-img"></div><span class="bw-l"></span><span class="bw-l s"></span><div class="bw-meta"><b>от&nbsp;···&nbsp;₽</b><span>···&nbsp;дней</span></div><span class="bw-cta">Запросить цену</span></div>
-                <div class="bw-card"><div class="bw-img"></div><span class="bw-l"></span><span class="bw-l s"></span><div class="bw-meta"><b>по&nbsp;запросу</b><span>···&nbsp;дней</span></div><span class="bw-cta">Запросить цену</span></div>
-                <div class="bw-card"><div class="bw-img"></div><span class="bw-l"></span><span class="bw-l s"></span><div class="bw-meta"><b>от&nbsp;···&nbsp;₽</b><span>···&nbsp;дней</span></div><span class="bw-cta">Запросить цену</span></div>
-                <div class="bw-card"><div class="bw-img"></div><span class="bw-l"></span><span class="bw-l s"></span><div class="bw-meta"><b>от&nbsp;···&nbsp;₽</b><span>···&nbsp;дней</span></div><span class="bw-cta">Запросить цену</span></div>
-                <div class="bw-card"><div class="bw-img"></div><span class="bw-l"></span><span class="bw-l s"></span><div class="bw-meta"><b>по&nbsp;запросу</b><span>···&nbsp;дней</span></div><span class="bw-cta">Запросить цену</span></div>
-                <div class="bw-card"><div class="bw-img"></div><span class="bw-l"></span><span class="bw-l s"></span><div class="bw-meta"><b>от&nbsp;···&nbsp;₽</b><span>···&nbsp;дней</span></div><span class="bw-cta">Запросить цену</span></div>
-              </div>
+            <div class="bw-head"><span class="bw-logo"></span><span class="bw-phone"></span></div>
+            <div class="bw-hero"><span class="bw-h1"></span><span class="bw-h1 s"></span><span class="bw-hbtn">Запросить цену</span></div>
+            <div class="bw-tabs"><span class="on">Группа 1</span><span>Группа 2</span><span>Группа 3</span></div>
+            <div class="bw-grid">
+              <div class="bw-card"><div class="bw-img"></div><span class="bw-l"></span><span class="bw-l s"></span><div class="bw-meta"><b>от&nbsp;···&nbsp;₽</b><span>···&nbsp;дней</span></div><span class="bw-cta">Запросить цену</span></div>
+              <div class="bw-card"><div class="bw-img"></div><span class="bw-l"></span><span class="bw-l s"></span><div class="bw-meta"><b>по&nbsp;запросу</b><span>···&nbsp;дней</span></div><span class="bw-cta">Запросить цену</span></div>
+              <div class="bw-card"><div class="bw-img"></div><span class="bw-l"></span><span class="bw-l s"></span><div class="bw-meta"><b>от&nbsp;···&nbsp;₽</b><span>···&nbsp;дней</span></div><span class="bw-cta">Запросить цену</span></div>
+              <div class="bw-card"><div class="bw-img"></div><span class="bw-l"></span><span class="bw-l s"></span><div class="bw-meta"><b>от&nbsp;···&nbsp;₽</b><span>···&nbsp;дней</span></div><span class="bw-cta">Запросить цену</span></div>
             </div>
           </div>
         </div>
-        <figcaption class="cap">Так выглядит дизайн с&nbsp;заглушками: страницы и&nbsp;карточки нарисованы, реальные фото и&nbsp;цены добавляем в&nbsp;декабре.</figcaption>
+        <figcaption class="cap">Так выглядит дизайн с&nbsp;заглушками: блоки и&nbsp;карточки нарисованы, реальные фото и&nbsp;цены добавляем в&nbsp;декабре.</figcaption>
       </figure>
 
       <div class="done">
         <p class="label">Результат к&nbsp;30&nbsp;ноября</p>
         <ul>
           <li>матрица ассортимента заполнена, собственник утвердил 2–3 группы;</li>
-          <li>структура каталога и&nbsp;шаблон карточки согласованы;</li>
-          <li>дизайн каталога с&nbsp;заглушками готов и&nbsp;согласован с&nbsp;собственником;</li>
-          <li>разработчики оценили, как и&nbsp;за&nbsp;какой срок собрать каталог;</li>
+          <li>структура посадочной и&nbsp;шаблон карточки согласованы;</li>
+          <li>дизайн посадочной с&nbsp;заглушками готов и&nbsp;согласован с&nbsp;собственником;</li>
+          <li>разработчики оценили, как и&nbsp;за&nbsp;какой срок собрать посадочную;</li>
           <li>позиции первых групп собраны в&nbsp;таблицу с&nbsp;ценами и&nbsp;сроками поставки.</li>
         </ul>
       </div>
@@ -300,20 +328,36 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
   <section class="sec" aria-labelledby="h-small">
     <div class="wrap">
       <div class="sec-head">
-        <h2 id="h-small">Две маленькие задачи</h2>
+        <h2 id="h-small">Две дополнительные задачи</h2>
         <p class="sec-lead">Их делает команда ИнКрафт, я&nbsp;ставлю задачу и&nbsp;проверяю результат.</p>
       </div>
       <div class="smalls">
         <article class="small">
-          <h3>Форма заявки на&nbsp;основном сайте</h3>
+          <div class="ill" aria-hidden="true">
+            <div class="mf"><span class="in">Имя</span><span class="in">Телефон</span><span class="in tall">Сообщение</span><span class="btn">Отправить</span></div>
+            <span class="mf-arrow"></span>
+            <div class="mf-mail">
+              <svg class="ico" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></svg>
+              <span class="mf-x"><svg class="ico" viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg></span>
+            </div>
+          </div>
+          <h3>Исправить форму заявки на&nbsp;основном сайте</h3>
           <p class="alert"><b>Проверили код:</b> у&nbsp;формы на&nbsp;странице «Контакты» нет отправки данных. Посетитель видит «Сообщение отправлено», но&nbsp;заявка до&nbsp;ИнКрафт не&nbsp;доходит.</p>
           <p>Нужно проверить это тестовой заявкой и&nbsp;исправить форму, чтобы заявки приходили ответственному в&nbsp;продажах.</p>
           <p class="who">Делают разработчики ИнКрафт.</p>
           <p class="ok">Готово, когда тестовая заявка с&nbsp;сайта пришла ответственному в&nbsp;продажах.</p>
         </article>
         <article class="small">
-          <h3>Начинаем собирать кейсы</h3>
-          <p>Для сайта, каталога и&nbsp;КП нужны примеры проектов с&nbsp;цифрами. Договариваюсь с&nbsp;инженерами, что собирать по&nbsp;каждому проекту: фото и&nbsp;видео работы ячейки, цифры до&nbsp;и&nbsp;после (выпуск в&nbsp;смену, такт, брак), разрешение клиента на&nbsp;публикацию.</p>
+          <div class="ill" aria-hidden="true">
+            <div class="cs-media"><span class="cs-play"></span></div>
+            <div class="cs-chart">
+              <div class="cs-bars"><span class="b0"></span><span class="b1"></span></div>
+              <div class="cs-lab"><span>до</span><span>после</span></div>
+              <p class="cs-cap">выпуск в&nbsp;смену</p>
+            </div>
+          </div>
+          <h3>Начать собирать кейсы</h3>
+          <p>Для сайта, посадочной и&nbsp;КП нужны примеры проектов с&nbsp;цифрами. Договариваюсь с&nbsp;инженерами, что собирать по&nbsp;каждому проекту: фото и&nbsp;видео работы ячейки, цифры до&nbsp;и&nbsp;после (выпуск в&nbsp;смену, такт, брак), разрешение клиента на&nbsp;публикацию.</p>
           <p class="who">Собирают инженеры, я&nbsp;даю инструкцию и&nbsp;раз в&nbsp;неделю проверяю.</p>
           <p class="ok">Готово, когда есть инструкция и&nbsp;общая папка, а&nbsp;материалы собраны по&nbsp;первым 3–5 проектам.</p>
         </article>
@@ -339,15 +383,15 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
     <div class="wrap">
       <div class="sec-head">
         <h2 id="h-roles">Кто что делает</h2>
-        <p class="sec-lead">Формат «Стратегия и&nbsp;сопровождение»: я&nbsp;консультирую и&nbsp;проверяю результат, работу руками делает команда ИнКрафт. Сам руками делаю только дизайн каталога, так быстрее.</p>
+        <p class="sec-lead">Формат «Стратегия и&nbsp;сопровождение»: я&nbsp;консультирую и&nbsp;проверяю результат, работу руками делает команда ИнКрафт. Сам руками делаю только дизайн посадочной, так быстрее.</p>
       </div>
       <div class="people">
         <article class="person">
           <div><h3>Денис</h3><p class="rs">консультирую и&nbsp;проверяю</p></div>
           <ul>
             <li>Шаблоны и&nbsp;задачи для команды, проверка сделанного каждую неделю</li>
-            <li>Структура каталога вместе с&nbsp;руководителем продаж</li>
-            <li class="hand">Руками: дизайн каталога с&nbsp;заглушками</li>
+            <li>Структура посадочной вместе с&nbsp;руководителем продаж</li>
+            <li class="hand">Руками: дизайн посадочной с&nbsp;заглушками</li>
             <li>Сводка собственнику после каждого созвона</li>
           </ul>
         </article>
@@ -363,7 +407,7 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
           <div><h3>Разработчики ИнКрафт</h3></div>
           <ul>
             <li>Проверяют и&nbsp;исправляют форму на&nbsp;странице «Контакты»</li>
-            <li>Оценивают сборку каталога по&nbsp;дизайну</li>
+            <li>Оценивают сборку посадочной по&nbsp;дизайну</li>
             <li>Дают мне доступ к&nbsp;сайту</li>
           </ul>
         </article>
@@ -377,7 +421,7 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
           <div><h3>Собственник</h3><p class="rs">1&nbsp;час в&nbsp;неделю</p></div>
           <ul>
             <li>Созвон со&nbsp;мной: решения и&nbsp;ход работы</li>
-            <li>Утверждает группы для каталога и&nbsp;дизайн</li>
+            <li>Утверждает группы для каталога и&nbsp;дизайн посадочной</li>
             <li>30&nbsp;ноября: итоги и&nbsp;решение на&nbsp;декабрь</li>
           </ul>
         </article>
@@ -403,7 +447,7 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
           <span role="columnheader">23–30 ноября</span>
         </div>
         <div class="g-row cat" role="row">
-          <span class="g-lab" role="rowheader">Каталог</span>
+          <span class="g-lab" role="rowheader">Посадочная</span>
           <span class="g-c" role="cell" data-w="2–6 ноября">Шаблон матрицы, руководитель продаж заполняет</span>
           <span class="g-c" role="cell" data-w="9–13 ноября">Матрица готова, структура и&nbsp;шаблон карточки</span>
           <span class="g-c" role="cell" data-w="16–20 ноября">Дизайн с&nbsp;заглушками, таблица позиций</span>
@@ -420,7 +464,7 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
           <span class="g-lab" role="rowheader">Собственник</span>
           <span class="g-c" role="cell" data-w="2–6 ноября">Первая встреча, повестка ниже</span>
           <span class="g-c" role="cell" data-w="9–13 ноября">Утверждаем матрицу и&nbsp;группы каталога</span>
-          <span class="g-c" role="cell" data-w="16–20 ноября">Смотрим дизайн каталога</span>
+          <span class="g-c" role="cell" data-w="16–20 ноября">Смотрим дизайн посадочной</span>
           <span class="g-c fin" role="cell" data-w="23–30 ноября">30&nbsp;ноября: итоги и&nbsp;решение на&nbsp;декабрь</span>
         </div>
       </div>
@@ -435,11 +479,11 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
       <div class="res">
         <div class="report">
           <p class="label">Отчёт на&nbsp;одной странице</p>
-          <p>Что готово по&nbsp;каталогу, сколько заявок пришло с&nbsp;сайта после исправления формы и&nbsp;по&nbsp;каким проектам собраны материалы для кейсов.</p>
+          <p>Что готово по&nbsp;посадочной, сколько заявок пришло с&nbsp;сайта после исправления формы и&nbsp;по&nbsp;каким проектам собраны материалы для кейсов.</p>
         </div>
         <div class="next">
           <p class="label">Решение на&nbsp;декабрь</p>
-          <p>Скорее всего, собираем каталог на&nbsp;сайте по&nbsp;готовому дизайну, наполняем первые группы и&nbsp;рассылаем каталог действующим клиентам. После запуска каталога можно подключить рекламу в&nbsp;Яндекс Директе.</p>
+          <p>Скорее всего, собираем посадочную по&nbsp;готовому дизайну, наполняем первые группы и&nbsp;отправляем ссылку действующим клиентам. После запуска можно подключить рекламу в&nbsp;Яндекс Директе.</p>
           <dl class="cost">
             <div><dt>Реклама</dt><dd>от&nbsp;85&nbsp;тыс.&nbsp;₽ в&nbsp;месяц</dd></div>
             <div><dt>Специалист по&nbsp;Директу</dt><dd>30–50&nbsp;тыс.&nbsp;₽ в&nbsp;месяц</dd></div>
@@ -457,9 +501,9 @@ h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
       </div>
       <ol class="agenda">
         <li>Кто отвечает за&nbsp;ноябрь со&nbsp;стороны ИнКрафт.</li>
-        <li>На каком сайте размещаем каталог: ИнКрафт или Сибирского индустриального центра.</li>
+        <li>Где размещаем посадочную с&nbsp;каталогом: на&nbsp;сайте ИнКрафт, Сибирского индустриального центра или на&nbsp;отдельном адресе.</li>
         <li>Какие товарные группы рассматриваем и&nbsp;кто даёт цены и&nbsp;сроки поставки.</li>
-        <li>Кто из разработчиков исправляет форму и&nbsp;оценивает сборку каталога, как я&nbsp;получаю доступ к&nbsp;сайту.</li>
+        <li>Кто из разработчиков исправляет форму и&nbsp;оценивает сборку посадочной, как я&nbsp;получаю доступ к&nbsp;сайту.</li>
         <li>Кто из инженеров собирает материалы для кейсов.</li>
         <li>Сколько часов в&nbsp;неделю команда выделяет на&nbsp;эти задачи.</li>
       </ol>
