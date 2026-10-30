@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>План ИнКрафт на ноябрь</title>
+<meta name="description" content="План маркетинга ИнКрафт на ноябрь 2026: продажи действующим клиентам, формы заявки на сайте, деньги и время">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  /* Layout: документ в одну колонку до 880px. Шапка с четырьмя цифрами, разделы через линейки,
+     левая колонка 200px для меток. Акцент: шов под заголовком и суммы. Палитра и шрифт как у стратегии. */
+  --bg:#FFFFFF;
+  --surface:#F3F5F9;
+  --ink:#131B2E;
+  --ink-2:#39445C;
+  --muted:#5E6880;
+  --line:#E1E6EF;
+  --line-2:#C6CEDD;
+  --accent:#365AAD;
+  --accent-ink:#2A4585;
+  --accent-soft:#E8EEF9;
+  --sky-soft:#E2F0FA;
+  --sky-ink:#1B5A84;
+  --money:#18307F;
+  --prio:#16A34A;
+  --prio-soft:#DDF4E4;
+  --prio-ink:#166534;
+  --focus:#2563EB;
+  --font:"Manrope","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1220; --surface:#141B2D; --ink:#EAEFF8; --ink-2:#C3CBDB; --muted:#95A0B6;
+    --line:#232D44; --line-2:#36425E; --accent:#7896E0; --accent-ink:#A3B8EE; --accent-soft:#1A2647;
+    --sky-soft:#13283A; --sky-ink:#8FCBF0; --money:#9DB7FF;
+    --prio:#22C55E; --prio-soft:#123321; --prio-ink:#8BE3A8; --focus:#60A5FA;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1220; --surface:#141B2D; --ink:#EAEFF8; --ink-2:#C3CBDB; --muted:#95A0B6;
+  --line:#232D44; --line-2:#36425E; --accent:#7896E0; --accent-ink:#A3B8EE; --accent-soft:#1A2647;
+  --sky-soft:#13283A; --sky-ink:#8FCBF0; --money:#9DB7FF;
+  --prio:#22C55E; --prio-soft:#123321; --prio-ink:#8BE3A8; --focus:#60A5FA;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none !important}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16.5px;line-height:1.6;
+  font-variant-numeric:tabular-nums lining-nums;-webkit-font-smoothing:antialiased}
+a{color:var(--accent-ink);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
+h1,h2,h3,p,ol,ul,dl,dd{margin:0}
+h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
+.wrap{max-width:880px;margin-inline:auto;padding-left:max(16px, env(safe-area-inset-left,0px));
+  padding-right:max(16px, env(safe-area-inset-right,0px))}
+.eyebrow,.label{font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase}
+.eyebrow{color:var(--accent-ink)}
+.label{color:var(--muted)}
+.m{color:var(--money);font-weight:800;white-space:nowrap}
+
+/* шапка */
+.hero{padding-block:clamp(36px,6vw,72px) clamp(36px,5vw,56px)}
+.hero h1{margin-top:16px;font-size:clamp(44px,8vw,84px);font-weight:800;letter-spacing:-0.035em;line-height:.95}
+.seam{height:14px;margin-block:24px 22px;max-width:620px;
+  background:
+   radial-gradient(circle at 0 50%, transparent 5.1px, var(--accent) 5.6px 6.4px, transparent 6.9px) 0 0/7px 14px repeat-x,
+   radial-gradient(circle at 0 50%, transparent 5.1px, var(--accent) 5.6px 6.4px, transparent 6.9px) 3.5px 0/7px 14px repeat-x;
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 72%,transparent);mask-image:linear-gradient(90deg,#000 0,#000 72%,transparent)}
+.sub{font-size:clamp(20px,2.5vw,25px);font-weight:600;color:var(--ink);letter-spacing:-0.01em;line-height:1.3;max-width:38ch}
+.intro{display:grid;gap:12px;margin-top:16px;color:var(--ink-2);max-width:64ch}
+.facts{margin-top:clamp(28px,4vw,40px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ink)}
+.facts div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:6px;padding:16px 16px 18px 0;border-bottom:1px solid var(--line)}
+.facts dd{font-size:clamp(28px,3.4vw,36px);font-weight:800;letter-spacing:-0.03em;line-height:1.05;color:var(--money);white-space:nowrap}
+.facts dt{font-size:14px;color:var(--muted);line-height:1.35}
+
+/* разделы */
+.sec{padding-block:clamp(40px,6vw,60px);border-top:1px solid var(--line)}
+.sec-head{display:grid;gap:10px;margin-bottom:20px}
+.sec h2{font-size:clamp(26px,3.6vw,36px);font-weight:700;letter-spacing:-0.025em}
+.sec-lead{color:var(--ink-2);max-width:64ch}
+.badge{justify-self:start;font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--prio-soft);color:var(--prio-ink)}
+.text{display:grid;gap:14px;color:var(--ink-2);max-width:66ch}
+
+/* критерий готовности */
+.done{margin-top:24px;padding:18px 20px 20px;border-radius:12px;background:var(--surface);max-width:66ch}
+.done ul{list-style:none;padding:0;margin-top:10px;display:grid;gap:8px}
+.done li{position:relative;padding-left:28px;color:var(--ink)}
+.done li::before{content:"";position:absolute;left:3px;top:.45em;width:13px;height:7px;
+  border-left:2.5px solid var(--prio);border-bottom:2.5px solid var(--prio);transform:rotate(-45deg)}
+
+/* срочное */
+.urgent{display:grid;border-top:1px solid var(--line-2)}
+.u{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 28px;padding:20px 0;border-bottom:1px solid var(--line)}
+.u h3{font-size:18.5px;font-weight:700;grid-column:1}
+.u p{grid-column:1;color:var(--ink-2);max-width:62ch}
+.u .tags{grid-column:2;grid-row:1 / span 2;display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.tag{display:inline-block;font-size:12.5px;font-weight:600;line-height:1.35;padding:3px 8px;border-radius:6px;white-space:nowrap}
+.tag.date{background:var(--accent-soft);color:var(--accent-ink)}
+.tag.bud{background:var(--sky-soft);color:var(--sky-ink)}
+
+/* деньги и время, недели */
+.rows{display:grid;border-top:1px solid var(--line-2)}
+.row{display:grid;grid-template-columns:200px minmax(0,1fr);gap:6px 24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row dt,.row .when{font-weight:700;color:var(--ink)}
+.row dd,.row p{color:var(--ink-2)}
+.row dd{display:grid;gap:8px}
+.row ul{padding-left:20px;display:grid;gap:6px}
+.weeks{list-style:none;padding:0}
+.cond{margin-top:24px;padding:20px 22px;border-radius:12px;background:var(--accent-soft);display:grid;gap:8px;max-width:66ch}
+.cond .label{color:var(--accent-ink)}
+.cond p{color:var(--ink)}
+
+/* повестка */
+.agenda{list-style:none;padding:0;counter-reset:a;display:grid;gap:14px;max-width:66ch}
+.agenda li{counter-increment:a;position:relative;padding-left:44px;min-height:28px;color:var(--ink)}
+.agenda li::before{content:counter(a);position:absolute;left:0;top:-1px;width:28px;height:28px;border-radius:50%;
+  background:var(--accent-soft);color:var(--accent-ink);font-weight:700;font-size:14px;display:grid;place-items:center}
+
+.foot{padding-block:24px 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between}
+
+@media (max-width:680px){
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .row{grid-template-columns:1fr}
+  .u{grid-template-columns:1fr}
+  .u .tags{grid-column:1;grid-row:auto;flex-direction:row;flex-wrap:wrap;align-items:flex-start;margin-top:4px}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Маркетинг ИнКрафт · ноябрь 2026</p>
+    <h1>План на&nbsp;ноябрь</h1>
+    <div class="seam" aria-hidden="true"></div>
+    <p class="sub">Начинаем в минимальном объёме, с&nbsp;продаж действующим клиентам: запчасти, расходники, диагностика и&nbsp;сервис.</p>
+    <div class="intro">
+      <p>Из первой волны плана я взял то, что быстрее всего приносит деньги и&nbsp;не&nbsp;требует бюджета. На заводах, где уже работают ячейки ИнКрафт, компанию знают, и&nbsp;там регулярно нужны запчасти, расходники и&nbsp;обслуживание. Первые КП этим клиентам можно отправить в&nbsp;середине ноября.</p>
+      <p>Каталог, рекламу и&nbsp;подрядчиков подключаем по итогам месяца, когда будут цифры. Полный план на&nbsp;12&nbsp;месяцев с&nbsp;бюджетами остаётся в&nbsp;силе: <a href="https://denismarsgpt-glitch.github.io/inkraft-marketing/">Маркетинг ИнКрафт</a>.</p>
+    </div>
+    <dl class="facts">
+      <div><dt>моя работа за ноябрь, предоплата</dt><dd>100&nbsp;тыс.&nbsp;₽</dd></div>
+      <div><dt>на подрядчиков и&nbsp;рекламу</dt><dd>0&nbsp;₽</dd></div>
+      <div><dt>встречи с&nbsp;собственником за&nbsp;месяц</dt><dd>2&nbsp;часа</dd></div>
+      <div><dt>отчёт и&nbsp;решение на&nbsp;декабрь</dt><dd>30&nbsp;ноября</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main>
+  <section class="sec" aria-labelledby="h-clients">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="badge">Главная задача месяца</span>
+        <h2 id="h-clients">Продажи действующим клиентам</h2>
+      </div>
+      <div class="text">
+        <p>Инженеры и&nbsp;руководитель продаж собирают реестр поставленного оборудования: клиент, площадка, модели роботов и&nbsp;сварочных источников, дата запуска, гарантия, контакты техников. Пока реестр собирается, руководитель продаж с&nbsp;инженером сервиса уже звонят клиентам, начиная с&nbsp;крупных. Спрашивают, как работает оборудование и&nbsp;что завод планирует дальше, и&nbsp;предлагают диагностику, запчасти, расходники и&nbsp;обслуживание.</p>
+        <p>Я готовлю шаблон реестра, сценарий звонка и&nbsp;короткие предложения для клиентов. Дважды в&nbsp;неделю разбираю с&nbsp;командой итоги звонков и&nbsp;помогаю с&nbsp;КП.</p>
+        <p>Во второй половине месяца по итогам звонков собираю с&nbsp;инженером сервиса 2–3 сервисных пакета на&nbsp;2027&nbsp;год. Пакеты различаются набором услуг: плановое обслуживание по графику, время реакции, запас критичных запчастей, удалённая диагностика, скидка на&nbsp;расходники. Цены утверждает собственник. Пакеты рассылаем клиентам в&nbsp;конце ноября, пока заводы планируют бюджеты на&nbsp;следующий год.</p>
+      </div>
+      <div class="done">
+        <p class="label">Готово, когда</p>
+        <ul>
+          <li>реестр заполнен по всем внедрённым проектам;</li>
+          <li>все клиенты обзвонены, у&nbsp;каждого в&nbsp;CRM или общей таблице записаны потребность и&nbsp;следующий шаг;</li>
+          <li>КП на&nbsp;запчасти, расходники и&nbsp;сервис отправлены;</li>
+          <li>сервисные пакеты с&nbsp;ценами на&nbsp;2027&nbsp;год разосланы клиентам.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-site">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-site">Формы заявки на&nbsp;сайте</h2>
+      </div>
+      <div class="text">
+        <p>Сейчас форма заявки есть только на странице «Контакты», и&nbsp;она ничего не&nbsp;отправляет. Посетитель нажимает кнопку и&nbsp;видит «Сообщение отправлено», хотя в&nbsp;коде страницы нет отправки данных. Такие заявки ИнКрафт не&nbsp;получает. На остальных страницах сайта есть только телефон и&nbsp;почта.</p>
+        <p>В первую неделю разработчики ИнКрафт настраивают эту форму, чтобы заявки приходили на&nbsp;почту ответственному в&nbsp;продажах. Затем по моему заданию ставят форму заявки на&nbsp;каждую страницу, кнопку «Прислать чертёж детали на&nbsp;оценку» и&nbsp;форму поиска запчасти по фото или артикулу.</p>
+      </div>
+      <div class="done">
+        <p class="label">Готово, когда</p>
+        <ul>
+          <li>тестовые заявки со&nbsp;всех форм пришли ответственному в&nbsp;продажах;</li>
+          <li>для заявок с&nbsp;сайта назначен срок ответа.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-urgent">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-urgent">Что нельзя перенести на&nbsp;декабрь</h2>
+        <p class="sec-lead">У этих задач есть сроки, поэтому решение по ним нужно на&nbsp;первой встрече.</p>
+      </div>
+      <div class="urgent">
+        <article class="u">
+          <h3>Новогодние подарки ключевым клиентам</h3>
+          <p>Чтобы подарки были готовы к&nbsp;Новому году, заказ нужно разместить до&nbsp;середины ноября. После вручения руководитель продаж звонит клиенту и&nbsp;заодно предлагает сервисный пакет на&nbsp;2027&nbsp;год.</p>
+          <div class="tags"><span class="tag date">Заказ до&nbsp;середины ноября</span><span class="tag bud">Бюджет: от&nbsp;100&nbsp;тыс.&nbsp;₽</span></div>
+        </article>
+        <article class="u">
+          <h3>Ноябрьская выставка</h3>
+          <p>Если участие в&nbsp;силе, заранее приглашаем заводы на&nbsp;встречу у&nbsp;стенда в&nbsp;назначенное время. В&nbsp;течение 48&nbsp;часов после выставки пишем каждому контакту. Одностраничник для стенда делаю сам.</p>
+          <div class="tags"><span class="tag bud">Бюджет: печать от&nbsp;10&nbsp;тыс.&nbsp;₽</span></div>
+        </article>
+        <article class="u">
+          <h3>Поддержка от&nbsp;китайского производителя роботов</h3>
+          <p>Я готовлю список просьб: демо-робот в&nbsp;Новосибирске, совместная новость о&nbsp;первом внедрении, участие в&nbsp;оплате выставок. Собственник обсуждает их при ближайшем разговоре с&nbsp;производителем.</p>
+          <div class="tags"><span class="tag bud">Без бюджета</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-money">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-money">Деньги и&nbsp;время</h2>
+      </div>
+      <dl class="rows">
+        <div class="row">
+          <dt>Моя работа</dt>
+          <dd><p><span class="m">100&nbsp;тыс.&nbsp;₽</span>, предоплата ноября. Это формат «Стратегия и&nbsp;сопровождение» из общего плана. В&nbsp;ноябре сценарий звонка, предложения, письма и&nbsp;задание разработчикам я&nbsp;пишу сам, это входит в&nbsp;оплату.</p></dd>
+        </div>
+        <div class="row">
+          <dt>Подрядчики и&nbsp;реклама</dt>
+          <dd><p><span class="m">0&nbsp;₽</span>. Подарки и&nbsp;печать к&nbsp;выставке оплачиваются отдельно, если собственник решит их делать.</p></dd>
+        </div>
+        <div class="row">
+          <dt>Команда ИнКрафт</dt>
+          <dd>
+            <ul>
+              <li>Ответственный за ноябрь, удобнее всего руководитель продаж.</li>
+              <li>Время руководителя продаж и&nbsp;инженера сервиса на&nbsp;реестр и&nbsp;звонки. По моей оценке, реестр займёт у&nbsp;них 2–3&nbsp;недели параллельно с&nbsp;основной работой.</li>
+              <li>Доступ к&nbsp;сайту и&nbsp;к&nbsp;списку проектов.</li>
+            </ul>
+          </dd>
+        </div>
+        <div class="row">
+          <dt>Собственник</dt>
+          <dd><p>Час на&nbsp;первой встрече, полчаса в&nbsp;середине месяца на&nbsp;цены сервисных пакетов и&nbsp;полчаса 30&nbsp;ноября на&nbsp;итоги. По пятницам присылаю короткую сводку в&nbsp;Telegram.</p></dd>
+        </div>
+      </dl>
+      <div class="cond">
+        <p class="label">Главное условие</p>
+        <p>План зависит от времени руководителя продаж и&nbsp;инженера сервиса. Если в&nbsp;ноябре у&nbsp;них не&nbsp;будет часов на&nbsp;реестр и&nbsp;звонки, продаж действующим клиентам тоже не&nbsp;будет. Поэтому на&nbsp;первой встрече договариваемся, сколько часов в&nbsp;неделю они выделяют на&nbsp;эту работу.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-weeks">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-weeks">По неделям</h2>
+      </div>
+      <ol class="rows weeks">
+        <li class="row"><span class="when">2–6 ноября</span><p>Встреча с&nbsp;собственником, знакомство с&nbsp;руководителем продаж и&nbsp;инженером сервиса. Заявки с&nbsp;формы на&nbsp;странице «Контакты» приходят на&nbsp;почту. Готовы шаблон реестра, сценарий звонка и&nbsp;задание разработчикам. Решение по подаркам и&nbsp;выставке.</p></li>
+        <li class="row"><span class="when">9–13 ноября</span><p>Реестр заполняется, первые звонки крупным клиентам. Формы заявки стоят на&nbsp;всех страницах сайта. Подарки заказаны.</p></li>
+        <li class="row"><span class="when">16–20 ноября</span><p>Реестр готов, звонки остальным клиентам, первые КП. Черновик сервисных пакетов.</p></li>
+        <li class="row"><span class="when">23–30 ноября</span><p>Обзвон закончен, сервисные пакеты с&nbsp;ценами разосланы. 30&nbsp;ноября отчёт на&nbsp;одной странице.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-result">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-result">Итоги 30&nbsp;ноября</h2>
+      </div>
+      <div class="text">
+        <p>В отчёте на&nbsp;одной странице будут итоги звонков по каждому клиенту, отправленные КП и&nbsp;закрытые сделки с&nbsp;суммами.</p>
+        <p>Там же моё предложение на&nbsp;декабрь. Скорее всего, это каталог и&nbsp;реклама в&nbsp;Яндекс Директе по тем запчастям и&nbsp;расходникам, о&nbsp;которых чаще всего спрашивали на&nbsp;звонках. Для этого уже нужны внешние деньги: <span class="m">от&nbsp;85&nbsp;тыс.&nbsp;₽ в&nbsp;месяц</span> на&nbsp;рекламу и&nbsp;<span class="m">30–50&nbsp;тыс.&nbsp;₽ в&nbsp;месяц</span> специалисту по Директу. Решение принимаем по цифрам ноября.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-agenda">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-agenda">Что решаем на&nbsp;первой встрече</h2>
+        <p class="sec-lead">На встречу нужен час.</p>
+      </div>
+      <ol class="agenda">
+        <li>Кто отвечает за&nbsp;ноябрь со&nbsp;стороны ИнКрафт.</li>
+        <li>Сколько часов в&nbsp;неделю руководитель продаж и&nbsp;инженер сервиса выделяют на&nbsp;реестр и&nbsp;звонки.</li>
+        <li>С&nbsp;каких клиентов начинаем звонки.</li>
+        <li>Кто из разработчиков делает формы и&nbsp;как я&nbsp;получаю доступ к&nbsp;сайту и&nbsp;списку проектов.</li>
+        <li>Подарки ключевым клиентам: делаем или нет, кому и&nbsp;в&nbsp;каком бюджете.</li>
+        <li>Ноябрьская выставка и&nbsp;разговор с&nbsp;производителем роботов: даты и&nbsp;кто участвует.</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Маркетинг ИнКрафт · план на&nbsp;ноябрь · октябрь 2026</span>
+    <a href="https://denismarsgpt-glitch.github.io/inkraft-marketing/">Полный план на&nbsp;12&nbsp;месяцев</a>
+  </div>
+</footer>
+</body>
+</html>
